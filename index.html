@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laser Lock — Detección Láser Inteligente</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-darkglass sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🔒 Laser Lock</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+          <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stats">Estadísticas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero-section text-center text-light">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold">Protege tu hogar con tecnología láser</h1>
+      <p class="lead mb-4">Laser Lock detecta robos mediante un haz de luz preciso y confiable, con alertas instantáneas.</p>
+    </div>
+  </section>
+
+  <!-- Características -->
+  <section id="caracteristicas" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-light">Características Principales</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card p-4 h-100">
+            <h5>Detección Precisa</h5>
+            <p>Un haz láser calibrado que identifica interrupciones con alta sensibilidad, reduciendo falsas alarmas.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card p-4 h-100">
+            <h5>Alertas Instantáneas</h5>
+            <p>Notificaciones inmediatas vía app, SMS o email ante cualquier intrusión detectada.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card p-4 h-100">
+            <h5>Fácil Integración</h5>
+            <p>Compatible con sistemas de seguridad existentes y plataformas de domótica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section id="beneficios" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-light">¿Por qué elegir Laser Lock?</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-transparent text-light border-light">✔ Tecnología láser de última generación.</li>
+        <li class="list-group-item bg-transparent text-light border-light">✔ Menor costo operativo que otros sistemas.</li>
+        <li class="list-group-item bg-transparent text-light border-light">✔ Instalación rápida y mantenimiento sencillo.</li>
+        <li class="list-group-item bg-transparent text-light border-light">✔ Cobertura en interiores y exteriores.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Estadísticas -->
+  <section id="stats" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-light">Estadísticas de Robos — Santiago / RM</h2>
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <canvas id="crimeChart" height="380"></canvas>
+          <div class="mt-3 d-flex flex-wrap gap-2">
+            <select id="datasetSelect" class="form-select w-auto bg-dark text-light border-secondary">
+              <option value="robos_violentos">Robos con violencia (RM, 2024)</option>
+              <option value="robos_lugar_habitado">Robos en lugar habitado (RM, 2024)</option>
+              <option value="ensuc_robos_hogares">ENUSC — % hogares (nacional, 2024)</option>
+            </select>
+            <button id="playTrend" class="btn btn-primary btn-sm">Reproducir tendencia</button>
+            <button id="downloadChart" class="btn btn-outline-light btn-sm">Descargar PNG</button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="stat-card p-3 mb-3">
+            <h5>Robos con violencia (RM)</h5>
+            <p class="display-6" id="statViolentos">47.536</p>
+          </div>
+          <div class="stat-card p-3 mb-3">
+            <h5>Robos en lugar habitado (RM)</h5>
+            <p class="display-6" id="statLugar">4.383</p>
+          </div>
+          <div class="stat-card p-3">
+            <h5>ENUSC 2024</h5>
+            <p class="display-6" id="statEnusc">3.5%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-light">Preguntas Frecuentes</h2>
+      <div class="accordion accordion-flush" id="faqAccordion">
+        <div class="accordion-item bg-dark text-light">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">¿Cómo funciona Laser Lock?</button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Emite un haz láser invisible que al ser interrumpido activa una alerta inmediata en tu dispositivo móvil.</div>
+          </div>
+        </div>
+        <div class="accordion-item bg-dark text-light">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">¿Es resistente a condiciones climáticas?</button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Sí, cuenta con sellado IP65 para uso en exteriores.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-darkglass text-center py-3 text-light">
+    <p class="mb-0">© <span id="year"></span> Laser Lock — Protección láser inteligente</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="static/js/script.js"></script>
+</body>
+</html>

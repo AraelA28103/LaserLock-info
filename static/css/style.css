@@ -1,0 +1,43 @@
+:root {
+  --bg: #0b0f14;
+  --panel: #0f1720;
+  --accent: #0ea5e9;
+  --muted: #9aa6b2;
+  --glass: rgba(255, 255, 255, 0.03);
+}
+
+body {
+  background: linear-gradient(180deg, var(--bg), #081014 160%);
+  color: #e6eef3;
+}
+
+.bg-darkglass {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), transparent);
+  backdrop-filter: blur(8px);
+}
+
+.hero-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+}
+
+.feature-card {
+  background: var(--panel);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.stat-card {
+  background: var(--panel);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.accordion-button {
+  border: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}
