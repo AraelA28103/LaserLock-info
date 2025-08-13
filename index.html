@@ -26,107 +26,112 @@
           <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologías</a></li>
           <li class="nav-item"><a class="nav-link" href="#stats">Estadísticas</a></li>
           <li class="nav-item"><a class="nav-link" href="#roles">Equipo</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section id="inicio" class="hero-section text-center text-light">
+  <div id="inicio" class="hero-section text-center text-light">
     <div class="container py-5">
-      <h1 class="display-4 fw-bold">Laser Lock: Seguridad accesible con tecnología láser</h1>
-      <p class="lead mb-4">Un sistema de detección de robos basado en láser y espejos, económico, autónomo y fácil de
-        instalar.</p>
+      <h1 class="display-4 fw-bold animate-fade">Protección Inteligente con Tecnología Láser</h1>
+      <p class="lead mb-4 animate-fade-delay">
+        Sistema de detección de intrusos rápido, preciso y accesible para todos.
+      </p>
     </div>
-  </section>
+  </div>
 
   <!-- Introducción -->
-  <section class="py-5">
+  <div class="py-5">
     <div class="container">
-      <h2 class="text-light">Introducción</h2>
-      <p>La seguridad en hogares y pequeños establecimientos requiere soluciones accesibles y eficientes. Este proyecto
-        propone un sistema de alarma basado en láser y espejos diminutos, capaz de detectar intrusiones mediante la
-        interrupción de un haz de luz. A diferencia de los sistemas comerciales, este prototipo ofrece bajo costo, fácil
-        instalación y mínimo consumo energético.</p>
+      <h2 class="text-light mb-4">Introducción</h2>
+      <div class="feature-card p-4 animate-up">
+        <p>Laser Lock es un sistema de seguridad láser diseñado para hogares y pequeños negocios. Utiliza un haz de luz
+          y espejos estratégicos para detectar cualquier intrusión de forma inmediata y confiable. Su diseño se centra
+          en la accesibilidad, bajo costo y facilidad de instalación.</p>
+      </div>
     </div>
-  </section>
+  </div>
 
   <!-- Problema y ODS -->
-  <section id="problema" class="py-5">
+  <div id="problema" class="py-5">
     <div class="container">
-      <h2 class="text-light">Identificación del Problema y ODS</h2>
-      <p>Muchas familias y pequeños negocios no pueden acceder a sistemas de seguridad comerciales por su alto costo y
-        complejidad. Estos sistemas dependen de energía continua y conocimientos técnicos avanzados. Esto deja a las
-        personas expuestas a robos, especialmente en zonas vulnerables.</p>
-      <h5 class="mt-3">ODS relacionados</h5>
-      <ul>
-        <li><strong>ODS 9:</strong> Industria, innovación e infraestructura — Promueve tecnologías accesibles y
-          adaptables.</li>
-        <li><strong>ODS 11:</strong> Ciudades y comunidades sostenibles — Mejora la seguridad y resiliencia en
-          comunidades vulnerables.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Solución -->
-  <section id="solucion" class="py-5">
-    <div class="container">
-      <h2 class="text-light">Propuesta de Solución Tecnológica</h2>
-      <p>Laser Lock combina un dispositivo físico innovador con una plataforma web inteligente para ofrecer protección
-        24/7. Utiliza láseres y espejos de 2x2 cm conectados a una ESP8266 con WiFi integrado, controlable desde
-        cualquier dispositivo.</p>
-      <p>La plataforma web ofrece monitoreo en tiempo real, configuración avanzada y análisis de actividad, todo con
-        interfaz amigable y adaptable a usuarios no técnicos.</p>
-    </div>
-  </section>
-
-  <!-- Tecnologías -->
-  <section id="tecnologias" class="py-5">
-    <div class="container">
-      <h2 class="text-light">Tecnologías Involucradas</h2>
-      <h5>Software</h5>
-      <ul>
-        <li>CSS, HTML, JavaScript, C++</li>
-      </ul>
-      <h5>Hardware</h5>
-      <ul>
-        <li>ESP8266 NodeMCU</li>
-        <li>Láser compatible con ESP8266</li>
-        <li>Sensor de luz</li>
-        <li>Teclado 4x4</li>
-        <li>Pantalla LCD</li>
-        <li>Chapa eléctrica</li>
-        <li>Buzzer</li>
-        <li>LED bicolor</li>
-        <li>10 espejos de 2x2 cm</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Estadísticas -->
-  <section id="stats" class="py-5">
-    <div class="container">
-      <h2 class="text-light">Estadísticas de Robos — Santiago / RM</h2>
+      <h2 class="text-light mb-4">Problema y Objetivos de Desarrollo Sostenible</h2>
       <div class="row g-4">
-        <div class="col-lg-8">
-          <canvas id="crimeChart" height="380"></canvas>
-          <div class="mt-3 d-flex flex-wrap gap-2">
-            <select id="datasetSelect" class="form-select w-auto bg-dark text-light border-secondary">
-              <option value="robos_violentos">Robos con violencia (RM, 2024)</option>
-              <option value="robos_lugar_habitado">Robos en lugar habitado (RM, 2024)</option>
-              <option value="ensuc_robos_hogares">ENUSC — % hogares (nacional, 2024)</option>
-            </select>
-            <button id="playTrend" class="btn btn-primary btn-sm">Reproducir tendencia</button>
-            <button id="downloadChart" class="btn btn-outline-light btn-sm">Descargar PNG</button>
+        <div class="col-md-6 animate-up">
+          <div class="feature-card p-4">
+            <h5>El Problema</h5>
+            <p>Los sistemas de seguridad convencionales suelen ser costosos y requieren instalación compleja. Esto deja
+              a familias y pequeños negocios en vulnerabilidad frente a robos.</p>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="stat-card p-3 mb-3">
+        <div class="col-md-6 animate-up">
+          <div class="feature-card p-4">
+            <h5>ODS Relacionados</h5>
+            <ul class="mb-0">
+              <li><strong>ODS 9:</strong> Promover tecnologías accesibles y sostenibles.</li>
+              <li><strong>ODS 11:</strong> Garantizar comunidades seguras y resilientes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Solución -->
+  <div id="solucion" class="py-5">
+    <div class="container">
+      <h2 class="text-light mb-4">Nuestra Solución</h2>
+      <div class="feature-card p-4 animate-up">
+        <p>Laser Lock integra un sistema físico basado en láseres y espejos de 2x2 cm con una plataforma web para
+          monitoreo remoto. Gracias a la conectividad WiFi del módulo ESP8266, se pueden recibir alertas en tiempo real
+          en cualquier dispositivo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tecnologías -->
+  <div id="tecnologias" class="py-5">
+    <div class="container">
+      <h2 class="text-light mb-4">Tecnologías Involucradas</h2>
+      <div class="row g-4">
+        <div class="col-md-6 animate-up">
+          <div class="feature-card p-4">
+            <h5>Software</h5>
+            <ul class="mb-0">
+              <li>CSS, HTML, JavaScript, C++</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 animate-up">
+          <div class="feature-card p-4">
+            <h5>Hardware</h5>
+            <ul class="mb-0">
+              <li>ESP8266 NodeMCU</li>
+              <li>Láser compatible con ESP8266</li>
+              <li>Sensor de luz, Teclado 4x4, Pantalla LCD</li>
+              <li>Chapa eléctrica, Buzzer, LED bicolor</li>
+              <li>10 espejos de 2x2 cm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estadísticas -->
+  <div id="stats" class="py-5">
+    <div class="container">
+      <h2 class="text-light mb-4">Estadísticas de Robos — Santiago / RM</h2>
+      <div class="row g-4">
+        <div class="mt-3 d-flex flex-wrap gap-2">
+        </div>
+        <div class="d-flex flex-wrap gap-3 animate-up">
+          <div class="stat-card p-3">
             <h5>Robos con violencia (RM)</h5>
             <p class="display-6" id="statViolentos">47.536</p>
           </div>
-          <div class="stat-card p-3 mb-3">
+          <div class="stat-card p-3">
             <h5>Robos en lugar habitado (RM)</h5>
             <p class="display-6" id="statLugar">4.383</p>
           </div>
@@ -137,73 +142,73 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Roles -->
-  <section id="roles" class="py-5">
-    <div class="container">
-      <h2 class="text-light">Equipo de Trabajo</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="feature-card p-3"><strong>Juan Prevals:</strong> Líder de proyecto / Backend</div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-card p-3"><strong>Arael Anabalón:</strong> Líder de proyecto / Investigador / Documentador
+    <!-- Roles -->
+    <div id="roles" class="py-5">
+      <div class="container">
+        <h2 class="text-light mb-4">Equipo de Trabajo</h2>
+
+        <!-- Líderes -->
+        <div class="row g-4 mb-3">
+          <div class="col-md-6 animate-up">
+            <div class="feature-card p-4 text-center">
+              <h4 class="text-accent mb-1">Líder del Proyecto</h4>
+              <!-- clase text-accent aplicada para color personalizado -->
+              <p class="mb-0"><strong>Arael Anabalón</strong> — Dirección general, investigación y documentación</p>
+            </div>
+          </div>
+          <div class="col-md-6 animate-up">
+            <div class="feature-card p-4 text-center">
+              <h4 class="text-accent mb-1">Líder del Proyecto</h4>
+              <p class="mb-0"><strong>Juan Prevals</strong> — Coordinación técnica y backend</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="feature-card p-3"><strong>Mauricio Flores:</strong> Backend / Investigador</div>
+
+        <!-- Coordinación -->
+        <div class="row g-4 mb-3">
+          <div class="col-md-12 animate-up">
+            <div class="feature-card p-4 text-center">
+              <h5 class="mb-1">Coordinación Técnica</h5>
+              <p class="mb-0"><strong>Mauricio Flores</strong> — Backend y análisis técnico</p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <div class="feature-card p-3"><strong>Luis Echeverria:</strong> Frontend / Especialista en hardware</div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-card p-3"><strong>Juan Donoso:</strong> Frontend / Diseñador web</div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-card p-3"><strong>Leonardo Pacheco:</strong> Investigador</div>
+
+        <!-- Desarrollo -->
+        <div class="row g-4">
+          <div class="col-md-4 animate-up">
+            <div class="feature-card p-4 text-center">
+              <h6 class="mb-1">Frontend & Hardware</h6>
+              <p class="mb-0"><strong>Luis Echeverria</strong></p>
+            </div>
+          </div>
+          <div class="col-md-4 animate-up">
+            <div class="feature-card p-4 text-center">
+              <h6 class="mb-1">Frontend & Diseño</h6>
+              <p class="mb-0"><strong>Juan Donoso</strong></p>
+            </div>
+          </div>
+          <div class="col-md-4 animate-up">
+            <div class="feature-card p-4 text-center">
+              <h6 class="mb-1">Investigación</h6>
+              <p class="mb-0"><strong>Leonardo Pacheco</strong></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-5">
-    <div class="container">
-      <h2 class="text-light">Preguntas Frecuentes</h2>
-      <div class="accordion accordion-flush" id="faqAccordion">
-        <div class="accordion-item bg-dark text-light">
-          <h2 class="accordion-header">
-            <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse"
-              data-bs-target="#faq1">¿Cómo funciona Laser Lock?</button>
-          </h2>
-          <div id="faq1" class="accordion-collapse collapse show">
-            <div class="accordion-body">Emite un haz láser invisible que, al ser interrumpido, activa una alerta
-              inmediata en tu dispositivo.</div>
-          </div>
-        </div>
-        <div class="accordion-item bg-dark text-light">
-          <h2 class="accordion-header">
-            <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#faq2">¿Es resistente a la intemperie?</button>
-          </h2>
-          <div id="faq2" class="accordion-collapse collapse">
-            <div class="accordion-body">Sí, cuenta con sellado IP65 para uso exterior.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="bg-darkglass text-center py-3 text-light">
+      <p class="mb-0">© <span id="year"></span> Laser Lock — Protección láser inteligente</p>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="bg-darkglass text-center py-3 text-light">
-    <p class="mb-0">© <span id="year"></span> Laser Lock — Protección láser inteligente</p>
-  </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="statics/js/script.js"></script>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script src="static/js/script.js"></script>
 </body>
 
 </html>

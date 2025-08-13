@@ -4,40 +4,124 @@
   --accent: #0ea5e9;
   --muted: #9aa6b2;
   --glass: rgba(255, 255, 255, 0.03);
+  /* usado para efecto vidrio */
 }
 
 body {
   background: linear-gradient(180deg, var(--bg), #081014 160%);
+  /* gradiente de fondo vertical extendido */
   color: #e6eef3;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .bg-darkglass {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), transparent);
+  /* sutil gradiente horizontal */
   backdrop-filter: blur(8px);
+  /* desenfoque de lo que está detrás para efecto vidrio */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--muted);
+  transition: color 0.2s ease;
+  /* suaviza el cambio de color */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: white;
 }
 
 .hero-section {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  padding: 60px 0;
 }
 
-.feature-card {
-  background: var(--panel);
-  border-radius: 10px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.02);
-}
-
+.feature-card,
 .stat-card {
   background: var(--panel);
   border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  /* sombra más intensa que un box-shadow básico */
   border: 1px solid rgba(255, 255, 255, 0.02);
+  /* borde muy tenue para efecto de profundidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* animación combinada para hover */
 }
 
-.accordion-button {
-  border: none;
+.feature-card:hover,
+.stat-card:hover {
+  transform: translateY(-3px);
+  /* eleva la tarjeta al pasar el mouse */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  /* sombra más marcada al hover */
 }
 
-.accordion-button:not(.collapsed) {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.05);
+.list-group-item {
+  border-color: rgba(255, 255, 255, 0.05);
+  /* borde muy tenue */
 }
+
+.form-select,
+.btn {
+  border-radius: 6px;
+}
+
+canvas {
+  background: var(--panel);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  /* línea superior tenue */
+}
+
+/* ==== Animaciones ==== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* aparición gradual */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* aparece y sube */
+
+.animate-fade {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-fade-delay {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.animate-up {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.reveal {
+  opacity: 1 !important;
+}
+
+/* fuerza visibilidad cuando entra en viewport */
